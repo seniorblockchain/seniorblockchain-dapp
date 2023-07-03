@@ -1,12 +1,12 @@
 import { APP_INITIALIZER, ENVIRONMENT_INITIALIZER, EnvironmentProviders, Provider, importProvidersFrom, inject } from '@angular/core';
-import { FUSE_MOCK_API_DEFAULT_DELAY, mockApiInterceptor } from '@senior/lib/mock-api';
+import { SENIOR_MOCK_API_DEFAULT_DELAY, mockApiInterceptor } from '@senior/lib/mock-api';
 import { SeniorLoadingService, seniorLoadingInterceptor } from '@senior/services/loading';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 
-import { FUSE_CONFIG } from '@senior/services/config/config.constants';
 import { MATERIAL_SANITY_CHECKS } from '@angular/material/core';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
+import { SENIOR_CONFIG } from '@senior/services/config/config.constants';
 import { SeniorConfig } from '@senior/services/config';
 import { SeniorConfirmationService } from '@senior/services/confirmation';
 import { SeniorMediaWatcherService } from '@senior/services/media-watcher';
@@ -46,11 +46,11 @@ export const provideSenior = (config: SeniorProviderConfig): Array<Provider | En
             },
         },
         {
-            provide : FUSE_MOCK_API_DEFAULT_DELAY,
+            provide : SENIOR_MOCK_API_DEFAULT_DELAY,
             useValue: config?.mockApi?.delay ?? 0,
         },
         {
-            provide : FUSE_CONFIG,
+            provide : SENIOR_CONFIG,
             useValue: config?.senior ?? {},
         },
 

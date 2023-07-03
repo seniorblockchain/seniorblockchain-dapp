@@ -1,13 +1,13 @@
 import { HttpErrorResponse, HttpEvent, HttpHandlerFn, HttpRequest, HttpResponse } from '@angular/common/http';
 import { Observable, delay, of, switchMap, throwError } from 'rxjs';
 
-import { FUSE_MOCK_API_DEFAULT_DELAY } from '@senior/lib/mock-api/mock-api.constants';
+import { SENIOR_MOCK_API_DEFAULT_DELAY } from '@senior/lib/mock-api/mock-api.constants';
 import { SeniorMockApiService } from '@senior/lib/mock-api/mock-api.service';
 import { inject } from '@angular/core';
 
 export const mockApiInterceptor = (request: HttpRequest<unknown>, next: HttpHandlerFn): Observable<HttpEvent<unknown>> =>
 {
-    const defaultDelay = inject(FUSE_MOCK_API_DEFAULT_DELAY);
+    const defaultDelay = inject(SENIOR_MOCK_API_DEFAULT_DELAY);
     const seniorMockApiService = inject(SeniorMockApiService);
 
     // Try to get the request handler

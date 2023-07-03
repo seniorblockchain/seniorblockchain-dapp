@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@angular/core';
-import { FUSE_CONFIG } from '@senior/services/config/config.constants';
+import { SENIOR_CONFIG } from '@senior/services/config/config.constants';
 import { merge } from 'lodash-es';
 import { BehaviorSubject, Observable } from 'rxjs';
 
@@ -11,7 +11,7 @@ export class SeniorConfigService
     /**
      * Constructor
      */
-    constructor(@Inject(FUSE_CONFIG) config: any)
+    constructor(@Inject(SENIOR_CONFIG) config: any)
     {
         // Private
         this._config = new BehaviorSubject(config);

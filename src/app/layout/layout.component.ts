@@ -4,7 +4,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { SeniorConfig, SeniorConfigService } from '@senior/services/config';
 import { SeniorMediaWatcherService } from '@senior/services/media-watcher';
 import { SeniorPlatformService } from '@senior/services/platform';
-import { FUSE_VERSION } from '@senior/version';
+import { SENIOR_VERSION } from '@senior/version';
 import { combineLatest, filter, map, Subject, takeUntil } from 'rxjs';
 import { EmptyLayoutComponent } from './layouts/empty/empty.component';
 import { CenteredLayoutComponent } from './layouts/horizontal/centered/centered.component';
@@ -114,7 +114,7 @@ export class LayoutComponent implements OnInit, OnDestroy
         });
 
         // Set the app version
-        this._renderer2.setAttribute(this._document.querySelector('[ng-version]'), 'senior-version', FUSE_VERSION);
+        this._renderer2.setAttribute(this._document.querySelector('[ng-version]'), 'senior-version', SENIOR_VERSION);
 
         // Set the OS name
         this._renderer2.addClass(this._document.body, this._seniorPlatformService.osName);

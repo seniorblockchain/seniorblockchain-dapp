@@ -33,7 +33,7 @@ const normalizeTheme = (theme) =>
 };
 
 // -----------------------------------------------------------------------------------------------------
-// @ FUSE TailwindCSS Main Plugin
+// @ SENIOR TailwindCSS Main Plugin
 // -----------------------------------------------------------------------------------------------------
 const theming = plugin.withOptions((options) => ({
         addComponents,
