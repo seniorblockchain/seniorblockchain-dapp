@@ -14,18 +14,18 @@ import { SearchComponent } from 'app/layout/common/search/search.component';
 import { SeniorFullscreenComponent } from '@senior/components/fullscreen';
 import { SeniorLoadingBarComponent } from '@senior/components/loading-bar';
 import { SeniorMediaWatcherService } from '@senior/services/media-watcher';
+import { SettingsComponent } from 'app/layout/common/settings/settings.component';
 import { ShortcutsComponent } from 'app/layout/common/shortcuts/shortcuts.component';
 import { UserComponent } from 'app/layout/common/user/user.component';
 
 @Component({
-    selector     : 'centered-layout',
-    templateUrl  : './centered.component.html',
+    selector: 'centered-layout',
+    templateUrl: './centered.component.html',
     encapsulation: ViewEncapsulation.None,
-    standalone   : true,
-    imports      : [SeniorLoadingBarComponent, NgIf, SeniorVerticalNavigationComponent, SeniorHorizontalNavigationComponent, MatButtonModule, MatIconModule, SeniorFullscreenComponent, SearchComponent, ShortcutsComponent, MessagesComponent, NotificationsComponent, UserComponent, RouterOutlet],
+    standalone: true,
+    imports: [SeniorLoadingBarComponent, NgIf, SeniorVerticalNavigationComponent, SeniorHorizontalNavigationComponent, MatButtonModule, MatIconModule, SeniorFullscreenComponent, SearchComponent, ShortcutsComponent, MessagesComponent, NotificationsComponent, UserComponent, RouterOutlet, SettingsComponent],
 })
-export class CenteredLayoutComponent implements OnInit, OnDestroy
-{
+export class CenteredLayoutComponent implements OnInit, OnDestroy {
     navigation: Navigation;
     isScreenSmall: boolean;
     private _unsubscribeAll: Subject<any> = new Subject<any>();
@@ -39,8 +39,7 @@ export class CenteredLayoutComponent implements OnInit, OnDestroy
         private _navigationService: NavigationService,
         private _seniorMediaWatcherService: SeniorMediaWatcherService,
         private _seniorNavigationService: SeniorNavigationService,
-    )
-    {
+    ) {
     }
 
     // -----------------------------------------------------------------------------------------------------
@@ -50,8 +49,7 @@ export class CenteredLayoutComponent implements OnInit, OnDestroy
     /**
      * Getter for current year
      */
-    get currentYear(): number
-    {
+    get currentYear(): number {
         return new Date().getFullYear();
     }
 
@@ -62,21 +60,18 @@ export class CenteredLayoutComponent implements OnInit, OnDestroy
     /**
      * On init
      */
-    ngOnInit(): void
-    {
+    ngOnInit(): void {
         // Subscribe to navigation data
         this._navigationService.navigation$
             .pipe(takeUntil(this._unsubscribeAll))
-            .subscribe((navigation: Navigation) =>
-            {
+            .subscribe((navigation: Navigation) => {
                 this.navigation = navigation;
             });
 
         // Subscribe to media changes
         this._seniorMediaWatcherService.onMediaChange$
             .pipe(takeUntil(this._unsubscribeAll))
-            .subscribe(({matchingAliases}) =>
-            {
+            .subscribe(({ matchingAliases }) => {
                 // Check if the screen is small
                 this.isScreenSmall = !matchingAliases.includes('md');
             });
@@ -85,8 +80,7 @@ export class CenteredLayoutComponent implements OnInit, OnDestroy
     /**
      * On destroy
      */
-    ngOnDestroy(): void
-    {
+    ngOnDestroy(): void {
         // Unsubscribe from all subscriptions
         this._unsubscribeAll.next(null);
         this._unsubscribeAll.complete();
@@ -101,13 +95,11 @@ export class CenteredLayoutComponent implements OnInit, OnDestroy
      *
      * @param name
      */
-    toggleNavigation(name: string): void
-    {
+    toggleNavigation(name: string): void {
         // Get the navigation
         const navigation = this._seniorNavigationService.getComponent<SeniorVerticalNavigationComponent>(name);
 
-        if ( navigation )
-        {
+        if (navigation) {
             // Toggle the opened status
             navigation.toggle();
         }

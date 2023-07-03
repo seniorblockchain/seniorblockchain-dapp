@@ -14,6 +14,7 @@ import { SearchComponent } from 'app/layout/common/search/search.component';
 import { SeniorFullscreenComponent } from '@senior/components/fullscreen';
 import { SeniorLoadingBarComponent } from '@senior/components/loading-bar';
 import { SeniorMediaWatcherService } from '@senior/services/media-watcher';
+import { SettingsComponent } from 'app/layout/common/settings/settings.component';
 import { ShortcutsComponent } from 'app/layout/common/shortcuts/shortcuts.component';
 import { UserComponent } from 'app/layout/common/user/user.component';
 
@@ -22,7 +23,7 @@ import { UserComponent } from 'app/layout/common/user/user.component';
     templateUrl  : './compact.component.html',
     encapsulation: ViewEncapsulation.None,
     standalone   : true,
-    imports      : [SeniorLoadingBarComponent, MatButtonModule, MatIconModule, SeniorFullscreenComponent, SearchComponent, ShortcutsComponent, MessagesComponent, NotificationsComponent, UserComponent, NgIf, RouterOutlet, SeniorVerticalNavigationComponent],
+    imports      : [SeniorLoadingBarComponent, MatButtonModule, MatIconModule, SeniorFullscreenComponent, SearchComponent, ShortcutsComponent, MessagesComponent, NotificationsComponent, UserComponent, NgIf, RouterOutlet, SeniorVerticalNavigationComponent, SettingsComponent],
 })
 export class CompactLayoutComponent implements OnInit, OnDestroy
 {
