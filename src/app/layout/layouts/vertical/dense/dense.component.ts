@@ -16,14 +16,13 @@ import { SeniorLoadingBarComponent } from '@senior/components/loading-bar';
 import { SeniorMediaWatcherService } from '@senior/services/media-watcher';
 import { SettingsComponent } from 'app/layout/common/settings/settings.component';
 import { ShortcutsComponent } from 'app/layout/common/shortcuts/shortcuts.component';
-import { UserComponent } from 'app/layout/common/user/user.component';
 
 @Component({
     selector     : 'dense-layout',
     templateUrl  : './dense.component.html',
     encapsulation: ViewEncapsulation.None,
     standalone   : true,
-    imports      : [SeniorLoadingBarComponent, SeniorVerticalNavigationComponent, MatButtonModule, MatIconModule, SeniorFullscreenComponent, SearchComponent, ShortcutsComponent, MessagesComponent, NotificationsComponent, UserComponent, NgIf, RouterOutlet, SettingsComponent],
+    imports      : [SeniorLoadingBarComponent, SeniorVerticalNavigationComponent, MatButtonModule, MatIconModule, SeniorFullscreenComponent, SearchComponent, ShortcutsComponent, MessagesComponent, NotificationsComponent, NgIf, RouterOutlet, SettingsComponent],
 })
 export class DenseLayoutComponent implements OnInit, OnDestroy
 {

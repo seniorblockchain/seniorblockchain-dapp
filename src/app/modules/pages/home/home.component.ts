@@ -6,7 +6,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
     templateUrl  : './home.component.html',
     encapsulation: ViewEncapsulation.None,
 })
-export class ExampleComponent
+export class HomeComponent
 {
     /**
      * Constructor

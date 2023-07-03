@@ -16,14 +16,13 @@ import { SeniorLoadingBarComponent } from '@senior/components/loading-bar';
 import { SeniorMediaWatcherService } from '@senior/services/media-watcher';
 import { SettingsComponent } from 'app/layout/common/settings/settings.component';
 import { ShortcutsComponent } from 'app/layout/common/shortcuts/shortcuts.component';
-import { UserComponent } from 'app/layout/common/user/user.component';
 
 @Component({
     selector     : 'modern-layout',
     templateUrl  : './modern.component.html',
     encapsulation: ViewEncapsulation.None,
     standalone   : true,
-    imports      : [SeniorLoadingBarComponent, NgIf, SeniorVerticalNavigationComponent, SeniorHorizontalNavigationComponent, MatButtonModule, MatIconModule, SeniorFullscreenComponent, SearchComponent, ShortcutsComponent, MessagesComponent, NotificationsComponent, UserComponent, RouterOutlet,SettingsComponent],
+    imports      : [SeniorLoadingBarComponent, NgIf, SeniorVerticalNavigationComponent, SeniorHorizontalNavigationComponent, MatButtonModule, MatIconModule, SeniorFullscreenComponent, SearchComponent, ShortcutsComponent, MessagesComponent, NotificationsComponent, RouterOutlet,SettingsComponent],
 })
 export class ModernLayoutComponent implements OnInit, OnDestroy
 {
