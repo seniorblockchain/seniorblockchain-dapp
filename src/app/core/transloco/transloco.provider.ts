@@ -1,5 +1,6 @@
-import { APP_INITIALIZER, EnvironmentProviders, importProvidersFrom, inject, Provider } from '@angular/core';
-import { TRANSLOCO_CONFIG, TRANSLOCO_LOADER, translocoConfig, TranslocoModule, TranslocoService } from '@ngneat/transloco';
+import { APP_INITIALIZER, EnvironmentProviders, Provider, importProvidersFrom, inject } from '@angular/core';
+import { TRANSLOCO_CONFIG, TRANSLOCO_LOADER, TranslocoModule, TranslocoService, translocoConfig } from '@ngneat/transloco';
+
 import { TranslocoHttpLoader } from 'app/core/transloco/transloco.http-loader';
 
 export const provideTransloco = (): Array<Provider | EnvironmentProviders> =>

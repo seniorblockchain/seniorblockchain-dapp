@@ -3,7 +3,6 @@ import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { SeniorHorizontalNavigationComponent, SeniorNavigationService, SeniorVerticalNavigationComponent } from '@senior/components/navigation';
 import { Subject, takeUntil } from 'rxjs';
 
-import { LanguagesComponent } from 'app/layout/common/languages/languages.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MessagesComponent } from 'app/layout/common/messages/messages.component';
@@ -23,7 +22,7 @@ import { UserComponent } from 'app/layout/common/user/user.component';
     templateUrl  : './centered.component.html',
     encapsulation: ViewEncapsulation.None,
     standalone   : true,
-    imports      : [SeniorLoadingBarComponent, NgIf, SeniorVerticalNavigationComponent, SeniorHorizontalNavigationComponent, MatButtonModule, MatIconModule, LanguagesComponent, SeniorFullscreenComponent, SearchComponent, ShortcutsComponent, MessagesComponent, NotificationsComponent, UserComponent, RouterOutlet],
+    imports      : [SeniorLoadingBarComponent, NgIf, SeniorVerticalNavigationComponent, SeniorHorizontalNavigationComponent, MatButtonModule, MatIconModule, SeniorFullscreenComponent, SearchComponent, ShortcutsComponent, MessagesComponent, NotificationsComponent, UserComponent, RouterOutlet],
 })
 export class CenteredLayoutComponent implements OnInit, OnDestroy
 {
