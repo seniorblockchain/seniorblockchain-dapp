@@ -75,6 +75,17 @@ export const appRoutes: Route[] = [
         children: [
             { path: 'home', loadChildren: () => import('app/modules/pages/home/home.routes') },
         ]
+    },
+     // ICO routes
+     {
+        path: '',
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        children: [
+            { path: 'ico', loadChildren: () => import('app/modules/pages/ico/ico.routes') },
+        ]
     }
 
 ];
