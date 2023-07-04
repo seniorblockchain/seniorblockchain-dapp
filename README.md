@@ -6,13 +6,13 @@
     About Senior Blockchin
   </h3>
   <p align="center">
-   About Senior Blockchin
+   Senior Blockchin DApp
   </p>
 </p>
 
-# 🕸️ SeniorBlockchain website
+# 🕸️ Senior Blockchin DApp
 
-   About Senior Blockchin
+  Senior Blockchin DApp
 
 
 ## 🖥️ Development server
