@@ -1,6 +1,6 @@
 <p align="center">
   <p align="center">
-   <a href="https://seniorblockchain.io"><img src="https://seniorblockchain.io/assets/images/logo/logo.svg" width="100" alt="senior blockchain"/></a> 
+   <a href="https://seniorblockchain.io"><img src="https://seniorblockchain.io/images/logo.svg" width="100" alt="senior blockchain"/></a> 
   </p>
   <h3 align="center">
     About Senior Blockchin
