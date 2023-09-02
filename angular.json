@@ -35,16 +35,16 @@
                             "quill"
                         ],
                         "assets": [
-                          "src/favicon-16x16.png",
-                          "src/favicon-32x32.png",
-                          "src/404.html",
-                          "src/assets",
-                          {
-                            "glob": "_redirects",
-                            "input": "src",
-                            "output": "/"
-                          },
-                          "src/manifest.webmanifest"
+                            "src/favicon-16x16.png",
+                            "src/favicon-32x32.png",
+                            "src/404.html",
+                            "src/assets",
+                            {
+                                "glob": "_redirects",
+                                "input": "src",
+                                "output": "/"
+                            },
+                            "src/manifest.webmanifest"
                         ],
                         "stylePreprocessorOptions": {
                             "includePaths": [
@@ -118,10 +118,10 @@
                         "tsConfig": "tsconfig.spec.json",
                         "inlineStyleLanguage": "scss",
                         "assets": [
-                          "src/favicon-16x16.png",
-                          "src/favicon-32x32.png",
-                          "src/assets",
-                          "src/manifest.webmanifest"
+                            "src/favicon-16x16.png",
+                            "src/favicon-32x32.png",
+                            "src/assets",
+                            "src/manifest.webmanifest"
                         ],
                         "styles": [
                             "src/styles/styles.scss"
@@ -133,6 +133,6 @@
         }
     },
     "cli": {
-      "analytics": "c5d6d231-1347-41f2-807c-c288c1db6574"
+        "analytics": "c5d6d231-1347-41f2-807c-c288c1db6574"
     }
 }
